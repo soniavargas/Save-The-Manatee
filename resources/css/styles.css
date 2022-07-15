@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #005580;
+  font-size: 18px;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: #005580;
+  z-index: 100;
+}
+
+header > nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2rem;
+  top: 30px;
+}
+
+.logo {
+  position: absolute;
+  display: inline-flex;
+  width: 150px;
+  margin-left: 3.5rem;
+  border-radius: 50%;
+  z-index: 200;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  list-style-type: none;
+  padding-left: 2.5rem;
+  margin-right: 20px;
+  font-size: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Banner */
+
+main {
+  position: relative;
+  text-align: center;
+  padding-top: 7rem;
+}
+
+.banner {
+  background-image: url("/resources/images/manatees.jpg");
+  width: 100%;
+  height: 800px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-content: center;
+  justify-content: center;
+}
+
+.banner > h1 {
+  font-size: 3.5rem;
+}
+
+.banner h1,
+span,
+button {
+  display: block;
+  position: relative;
+  top: 200px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+button {
+  background-color: #339999;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 6px;
+  padding: 15px 30px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #07c7c7;
+}
+
+/* Cause Section */
+
+.cause {
+  background-color: white;
+  color: #339999;
+  height: auto;
+  width: 100%;
+  margin: auto;
+  padding: 3rem;
+}
+
+.cause > h1 {
+  font-size: 3.5rem;
+  padding: 2rem;
+}
+
+.cause > p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  width: 50%;
+  margin: auto;
+}
+
+/* Help Section */
+
+.help-title {
+  margin: 2rem;
+  padding-top: 1rem;
+  font-size: 3.5rem;
+}
+
+.help {
+  position: relative;
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.8rem;
+}
+
+.help-card {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  background-color: #339999;
+}
+
+.help-card > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.help-card > p {
+  width: 100%;
+  height: auto;
+}
+
+.help-card > h4 {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.help-card > i {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+/* Get Involve Section */
+
+.involve-title {
+  margin: 2rem;
+  padding-top: 2rem;
+  font-size: 3.5rem;
+}
+
+.involve {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.widget {
+  display: block;
+  width: 400px;
+  height: 350px;
+  padding-bottom: 2rem;
+  background-color: white;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.widget > h2 {
+  color: #005580;
+  padding: 1rem;
+}
+
+.inner-pic > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: auto;
+  line-height: 1.8;
+  padding: 3rem;
+  text-align: right;
+  background-image: linear-gradient(#339999, #005580);
+}
+
+footer > .card {
+  width: 50%;
+  float: left;
+  padding: 2rem;
+  
+}
+
+.card > .contact {
+  text-align: left;
+}
+
+.card > .social {
+  text-align: right;
+}
+
+
+.social > h5, h6  {
+  font-weight: 500;
+}
+
+
+/* Media queries */
+
+@media only screen and (max-width: 678px) {
+  nav  li {
+    display: none;
+  }
+
+  .banner {
+    max-height: 600px;
+  }
+
+  .banner > h1 {
+    font-size: 2rem;
+  }
+
+  .banner > button {
+    font-size: 1rem;
+  }
+
+  .cause {
+    max-height: 600px;
+    line-height: 1.5;
+  }
+
+  .cause > h1 {
+    font-size: 2.5rem;
+  }
+
+  .cause > p {
+    font-size: 1.5rem;
+  }
+
+  .help-title {
+    font-size: 2.5rem;
+  }
+
+  .help {
+    grid-template-columns: repeat(1, 1fr);
+  }
+ 
+  .involve-title {
+    font-size: 2rem;
+  }
+
+  .involve {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact  {
+    font-size: 0.8rem;
+  }
+
+  .social {
+    font-size: 0.8rem;
+  }
+
+  
+
+}
